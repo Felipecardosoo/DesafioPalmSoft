@@ -40,6 +40,14 @@ Desafio referente à uma API RESTful que permite criar, editar, buscar e excluir
 - spring-boot-devtools
 - h2-database
 
+##EndPoint
+- POST http://localhost:8000/produto/criar;
+  Será enviado no body o JSON de exemplo com as informações produto:{"nome": "cinto", "valor": 40};
+- PUT http://localhost:8000/produto/editar/idProduto(endpoint para editar o produto com id informado)
+  Será enviado no body o JSON de exemplo com o id do produto informado:{"nome": "sapato", "valor": 20};
+- DEL http://localhost:8000/produto/deletar/idProduto(endpoint para deletar o produto com id informado);
+- GET http://localhost:8000/produto/buscar/idProduto(endpoint para buscar o produto com id informado);
+- GET http://localhost:8000/produto/buscar/(buscará todos os produtos no database).
 
 | componente | porta |
 | --------- | ----------- |
