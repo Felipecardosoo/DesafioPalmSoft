@@ -35,7 +35,7 @@ public class ProdutoService {
         Optional<Produto> produto = produtoRepository.findById(idProduto);
         if(produto.isPresent()){
             if(produto.get().getValor().equals(new BigDecimal("10.00"))){
-                throw new Exception("Não é possível deletar produtos com valor 10");
+                throw new Exception("Não é possível deletar produtos com valor 10!!");
             }
             produtoRepository.delete(produto.get());
         }
